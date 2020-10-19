@@ -98,14 +98,9 @@ public class Justrechargeit_login extends StaticVariables {
 	}
 
 	@AfterMethod
-	public void aftermethod() throws IOException {
+	public void takeScreenshot() throws IOException {
 
-		Date sd = new Date();
-		SimpleDateFormat cdf = new SimpleDateFormat("MMddyyyy_HHmmss");
-		String timestamp = cdf.format(sd);
-
-		File srcfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(srcfile, new File(".\\Screenshots\\" + timestamp + ".jpg"));
+		cfn.takescreenshotWithTimestamp();
 	}
 
 }
