@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CrossBrowserTestingSuite">
+
+	<test thread-count="5" name="ChromeTestResults">
+		<parameter name="browsername" value="Chrome"></parameter>
+	<classes>
+		<class name="com.testscenarios.Expedia" />
+		<class name="com.testscenarios.DataProviderSample" />
+	</classes>
+	</test>
+	
+	<test thread-count="5" name="FirefoxTestResults">
+		<parameter name="browsername" value="Firefox"></parameter>
+	<classes>
+		<class name="com.testscenarios.Expedia" />
+		<class name="com.testscenarios.DataProviderSample" />
+	</classes>
+	</test>
+	
+	<test thread-count="5" name="EdgeTestResults">
+		<parameter name="browsername" value="Edge"></parameter>
+	<classes>
+		<class name="com.testscenarios.Expedia" />
+		<class name="com.testscenarios.DataProviderSample" />
+	</classes>
+	</test>
+	
+	
+</suite> <!-- Suite -->

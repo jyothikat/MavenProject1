@@ -100,7 +100,7 @@ public class Justrechargeit_login extends StaticVariables {
 	@AfterMethod
 	public void takeScreenshot() throws IOException {
 
-		cfn.takescreenshotWithTimestamp();
+		cfn.takescreenshotWithTimestamp("Justchargeit");
 	}
 
 }

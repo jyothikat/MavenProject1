@@ -2,16 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="87051" started-at="2020-10-19T10:50:11 EDT" finished-at="2020-10-19T10:51:38 EDT">
+  <suite name="Default suite" duration-ms="60848" started-at="2020-11-17T13:04:44 EST" finished-at="2020-11-17T13:05:45 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="87051" started-at="2020-10-19T10:50:11 EDT" finished-at="2020-10-19T10:51:38 EDT">
-      <class name="com.testscenarios.Rediff_Register">
-        <test-method status="PASS" signature="f()[pri:0, instance:com.testscenarios.Rediff_Register@3b088d51]" name="f" duration-ms="86998" started-at="2020-10-19T10:50:11 EDT" finished-at="2020-10-19T10:51:38 EDT">
+    <test name="Default test" duration-ms="60848" started-at="2020-11-17T13:04:44 EST" finished-at="2020-11-17T13:05:45 EST">
+      <class name="com.testscenarios.SimpleInterest_DDT">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.testscenarios.SimpleInterest_DDT@516be40f]" name="setUp" is-config="true" duration-ms="4562" started-at="2020-11-17T13:04:44 EST" finished-at="2020-11-17T13:04:48 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.testscenarios.SimpleInterest_DDT@516be40f]" name="f" duration-ms="43270" started-at="2020-11-17T13:04:48 EST" finished-at="2020-11-17T13:05:32 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- com.testscenarios.Rediff_Register -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.testscenarios.SimpleInterest_DDT@516be40f]" name="afterMethod" is-config="true" duration-ms="428" started-at="2020-11-17T13:05:32 EST" finished-at="2020-11-17T13:05:32 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.testscenarios.SimpleInterest_DDT@516be40f]" name="afterClass" is-config="true" duration-ms="12551" started-at="2020-11-17T13:05:32 EST" finished-at="2020-11-17T13:05:45 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.testscenarios.SimpleInterest_DDT -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

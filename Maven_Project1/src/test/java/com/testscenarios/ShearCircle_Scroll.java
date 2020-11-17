@@ -55,4 +55,5 @@ public class ShearCircle_Scroll extends StaticVariables{
   public void close() {
 	  driver.quit();
   }
-}
+  
+  }

@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscenarios.Rediff_Register">
+      <class name="com.testscenarios.SimpleInterest_DDT">
         <methods>
           <include name="f"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.testscenarios.Rediff_Register -->
+      </class> <!-- com.testscenarios.SimpleInterest_DDT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

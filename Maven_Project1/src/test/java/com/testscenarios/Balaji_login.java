@@ -37,7 +37,7 @@ public class Balaji_login extends StaticVariables {
 
 	@Parameters({ "browsername" })
 	@BeforeClass
-	public void setup(@Optional("chrome") String browsername) {
+	public void setup(@Optional("ie") String browsername) {
 		if (browsername.equalsIgnoreCase("chrome")) {
 			cfn.chromeBrowserLaunch();
 		} else if (browsername.equalsIgnoreCase("firefox")) {
@@ -83,11 +83,16 @@ public class Balaji_login extends StaticVariables {
 		cfn.sendKeysByAnyLocator(obj.ADDRESSLINE2_INPUT, prop.getProperty("Addressline2"));
 //		driver.findElement(obj.CITY_INPUT).sendKeys(prop.getProperty("City"));
 		cfn.sendKeysByAnyLocator(obj.CITY_INPUT, prop.getProperty("City"));
-
-		Select country = new Select(driver.findElement(obj.COUNTRY_DROPDOWN));
-		country.selectByVisibleText(prop.getProperty("Country"));
-		Select state = new Select(driver.findElement(obj.STATE_DROPDOWN));
-		state.selectByVisibleText(prop.getProperty("State"));
+		
+		cfn.selectByVisibleText(obj.COUNTRY_DROPDOWN, prop.getProperty("Country"));
+//		Select country = new Select(driver.findElement(obj.COUNTRY_DROPDOWN));
+//		country.selectByVisibleText(prop.getProperty("Country"));
+		
+		cfn.printAllDropdownValues(obj.COUNTRY_DROPDOWN);
+		
+		cfn.selectByVisibleText(obj.STATE_DROPDOWN, prop.getProperty("State"));
+//		Select state = new Select(driver.findElement(obj.STATE_DROPDOWN));
+//		state.selectByVisibleText(prop.getProperty("State"));
 
 //		driver.findElement(obj.ZIPCODE_INPUT).sendKeys(prop.getProperty("Zipcode"));
 		cfn.sendKeysByAnyLocator(obj.ZIPCODE_INPUT, prop.getProperty("Zipcode"));
@@ -133,15 +138,11 @@ public class Balaji_login extends StaticVariables {
 	}
 
 	@AfterMethod
-	public void screenshot() throws IOException {
-		Date sd = new Date();
-		SimpleDateFormat cd = new SimpleDateFormat("MMddyyyy_HHmmss");
-		String timestamp = cd.format(sd);
+	public void takeScreenshot() throws IOException {
 
-		// Taking screenshot
-		File srcfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileHandler.copy(srcfile, new File(".\\Screenshots\\" + timestamp + ".jpg"));
+			cfn.takescreenshotWithTimestamp("Balaji");
+		}
 
 	}
 
-}
+
